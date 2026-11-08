@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saffron & Smoke | Restaurant</title>
+<meta name="description" content="Saffron & Smoke - wood-fired grill and traditional flavours. Browse the menu and reserve a table online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="header">
+  <div class="container nav">
+    <a href="#home" class="logo">Saffron<span>&</span>Smoke</a>
+    <button class="menu-toggle" id="toggle" aria-label="Toggle menu">&#9776;</button>
+    <ul id="links">
+      <li><a href="#about">Our Story</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#reserve">Reservations</a></li>
+      <li><a href="#reserve" class="btn btn-primary" style="padding:9px 20px;color:#1a1209">Book a Table</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container">
+    <p class="eyebrow">Wood-fired &middot; Slow-cooked &middot; Since 2014</p>
+    <h1>Where fire meets <em>flavour</em></h1>
+    <p>Traditional recipes, charcoal grills and hand-ground spices. Come hungry, leave with a story.</p>
+    <div class="actions">
+      <a href="#reserve" class="btn btn-primary">Reserve a Table</a>
+      <a href="#menu" class="btn btn-ghost">Explore Menu</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong>10+</strong><span>Years of taste</span></div>
+      <div><strong>45</strong><span>Signature dishes</span></div>
+      <div><strong>4.8&#9733;</strong><span>Guest rating</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="reveal">
+      <p class="eyebrow">Our Story</p>
+      <h2>Cooked the slow way, on purpose</h2>
+      <p>Saffron &amp; Smoke started as a small charcoal grill with one family recipe. Today we still marinate overnight, grind our spices in-house and cook over real wood.</p>
+      <p>No shortcuts. Just good ingredients, patient cooking and a table full of people you love.</p>
+    </div>
+    <div class="about-visual reveal" aria-hidden="true">&#128293;</div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">The Menu</p>
+      <h2>Taste what we're known for</h2>
+    </div>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <div class="menu-grid" id="menuGrid"></div>
+  </div>
+</section>
+
+<section class="reserve" id="reserve">
+  <div class="container reserve-wrap">
+    <div class="info reveal">
+      <p class="eyebrow">Reservations</p>
+      <h2>Save your table</h2>
+      <p>Book online in under a minute. For groups larger than 10, please call us directly.</p>
+      <p>&#128222; +92 333 8816134</p>
+      <p>&#128205; North Nazimabad, Karachi</p>
+      <div class="hours">
+        <div><strong>Mon &ndash; Thu</strong><span>12:00 PM &ndash; 11:00 PM</span></div>
+        <div><strong>Fri &ndash; Sun</strong><span>12:00 PM &ndash; 12:30 AM</span></div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <form id="reserveForm" novalidate>
+        <div class="row">
+          <label>Full name
+            <input type="text" name="name" placeholder="Your name" required>
+            <span class="error" data-for="name"></span>
+          </label>
+          <label>Phone
+            <input type="tel" name="phone" placeholder="03XX XXXXXXX" required>
+            <span class="error" data-for="phone"></span>
+          </label>
+        </div>
+        <div class="row">
+          <label>Date
+            <input type="date" name="date" required>
+            <span class="error" data-for="date"></span>
+          </label>
+          <label>Time
+            <select name="time" required>
+              <option value="">Select time</option>
+              <option>1:00 PM</option><option>2:00 PM</option><option>3:00 PM</option>
+              <option>7:00 PM</option><option>8:00 PM</option><option>9:00 PM</option><option>10:00 PM</option>
+            </select>
+            <span class="error" data-for="time"></span>
+          </label>
+        </div>
+        <label>Guests
+          <select name="guests">
+            <option>1</option><option selected>2</option><option>3</option><option>4</option>
+            <option>5</option><option>6</option><option>8</option><option>10</option>
+          </select>
+        </label>
+        <label>Special request (optional)
+          <textarea name="note" rows="3" placeholder="Birthday, allergies, seating preference..."></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Confirm Reservation</button>
+      </form>
+      <div class="success" id="success">
+        <div class="check">&#9989;</div>
+        <h3>Table reserved!</h3>
+        <p id="successMsg"></p>
+        <button class="btn btn-ghost" id="again" style="margin-top:20px">Make another booking</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span>&copy; <span id="year"></span> Saffron &amp; Smoke. Demo project.</span>
+    <span>Design &amp; development by <strong>Muhammad Saad Siddiqui</strong></span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
